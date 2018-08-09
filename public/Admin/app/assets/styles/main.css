@@ -1,0 +1,202 @@
+/* Space out content a bit */
+body {
+    padding-bottom: 20px;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.navbar-default{
+	background-color: rgb(27, 135, 230) !important;
+    
+}
+.panel-purple{
+  border: 1px solid #daa8f3 !important;
+}
+.panel-purple .panel-heading{
+  background: #daa8f3 !important;
+  color: #fff !important;
+}
+.ctm-navbar{
+	color: rgb(255, 255, 255) !important;
+}
+.openmenuSetting{
+   color: rgb(255, 255, 255) !important;
+ background-color: #3456a2 !important;
+cursor: pointer;
+}
+.page-header {
+    margin: 10px 0 20px !important;
+}
+.card .card-subtitle {
+  font-weight: 300;
+  margin-bottom: 15px;
+  color: #99abb4;
+}
+.card-subtitle {
+  margin-top: -.375rem;
+  margin-bottom: 0;
+}
+.nav>li>a {
+  text-decoration: none;
+  background-color: #eee;
+}
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+.nav>li.active>a {
+text-decoration: none;
+background-color: #eee;
+}
+
+.category.fa.fa-edit{
+  content: "\f06e";
+  font-family: FontAwesome;
+  font-size: 14px;
+  width: 35%;
+  background: #428bca;
+  color: #fff;
+  padding: 5px 7px;
+  border-radius: 5px;
+}
+
+.user.fa.fa-edit{
+  content: "\f06e";
+  font-family: FontAwesome;
+  font-size: 14px;
+  width: 14%;
+  background: #428bca;
+  color: #fff;
+  padding: 5px 7px;
+  border-radius: 5px;
+}
+.deleteevent {
+  content: "";
+  font-family: FontAwesome;
+  font-size: 14px;
+  width: 33%;
+  background: #d9534f;
+  color: #fff;
+  padding: 5px 7px;
+  border-radius: 5px;
+}
+.user.fa.fa-trash-o{
+  content: "";
+  font-family: FontAwesome;
+  font-size: 14px;
+  width: 14%;
+  background: #d9534f;
+  color: #fff;
+  padding: 5px 7px;
+  border-radius: 5px;
+}
+
+.user.fa.fa-eye{
+  content: "\f06e";
+  font-family: FontAwesome;
+  font-size: 14px;
+  width: 16%;
+  background: #428bca;
+  color: #fff;
+  padding: 5px 7px;
+  border-radius: 5px;
+}
+
+.inactiveevent {
+  content: "\f00c";
+  font-family: FontAwesome;
+  font-size: 14px;
+  width: 14%;
+  background: #5bc0de;
+  color: #fff;
+  padding: 5px 7px;
+  border-radius: 5px;
+}
+.enquiry.fa.fa-eye{
+  content: "\f06e";
+    font-family: FontAwesome;
+    font-size: 14px;
+    width: 40%;
+    background: #428bca;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+.exptbtn {
+  float: right;
+  margin-top: -4px;
+  background-color: #02c5d2;
+  border: 1px solid #02c5d2;
+  color: #fff;
+  font-size: 12px;
+  padding: 5px 15px 5px 14px;
+  cursor: pointer;
+}

@@ -1,0 +1,705 @@
+	<!-- Header -->
+	<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
+
+	<!-- Slide1 -->
+	<section class="slide1">
+		<div class="wrap-slick1">
+			<div class="slick1">
+				<div class="item-slick1 item1-slick1" style="background-image: url(images/img11.jpg">
+					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+	 <div class="input-group stylish-input-group">
+                   <input type="text" class="form-control"  placeholder="Search For Products, Brand and More" > 
+					
+                    <span class="input-group-addon">
+                        <button type="submit">
+                            Search
+                        </button>  
+                    </span>
+                </div>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- Banner -->
+	<section class="banner bgwhite p-t-40 p-b-40">
+		<div class="container">
+			<div class="row">
+			<div class="top-h">
+			<h3 class="m-text5 t-center">
+					Our Categories
+				</h3>
+				<a href="#">See All</a>
+				</div>
+				<div class="col-sm-12 m-l-r-auto">
+					<!-- block1 -->
+					<div class="block1 hov-img-zoom pos-relative m-b-30" ng-repeat="catobj in Categories" ng-if="$index < 5">
+					
+					<div class="block1-wrapbtn w-size2">
+							<!-- Button -->
+							<a ng-click="pageChangedBycat(catobj._id)" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
+								{{catobj.name}}	
+							</a>
+						</div>
+						<img src="images/img10.jpg" alt="IMG-BENNER">
+									
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- New Product -->
+	<section class="newproduct bgwhite p-t-45 p-b-105">
+		<div class="container">
+			<div class="sec-title p-b-60">
+				<h3 class="m-text5 t-center">
+					Electronics
+				</h3>
+			</div>
+
+			<!-- Slide2 -->
+			<div class="wrap-slick2">
+				<div class="slick2">
+
+					<div class="item-slick2 p-l-15 p-r-15" ng-repeat="product in productList">
+						<!-- Block2 -->
+						<div class="block2">
+							<div class="block2-img wrap-pic-w of-hidden pos-relative block2-">
+								<img src="images/img13.png" alt="IMG-PRODUCT">
+
+								<div class="block2-overlay trans-0-4">
+									<a href="#" class="block2- hov-pointer trans-0-4">
+										
+									</a>
+
+									<div class="block2-btn-addcart w-size1 trans-0-4">
+										<!-- Button -->
+										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+											Booking
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="block2-txt p-t-20">
+								<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+									Android Mobile
+								</a>
+
+								<span class="block2-price m-text6 p-r-5">
+									$3.00 a Day
+								</span>
+							</div>
+						</div>
+					</div>
+
+					
+				</div>
+			</div>
+
+		</div>
+	</section>
+	
+	
+	<section class="recomm bgwhite p-t-45 p-b-105">
+		<div class="container">
+			<div class="sec-title p-b-60">
+				<h3 class="m-text5 t-center">
+					Recommended Item
+				</h3>
+				<a href="#">See All</a>
+			</div>
+
+			<!-- Slide2 -->
+			<div class="wrap-slick2">
+				<div class="slick2">
+
+
+					<div class="item-slick2 p-l-15 p-r-15">
+						<!-- Block2 -->
+						<div class="block2">
+							<div class="block2-img wrap-pic-w of-hidden pos-relative">
+								<img src="images/img1.png" alt="IMG-PRODUCT">
+
+								<div class="block2-overlay trans-0-4">
+									<a href="#" class="block2- hov-pointer trans-0-4">
+										
+									</a>
+
+									<div class="block2-btn-addcart w-size1 trans-0-4">
+										<!-- Button -->
+										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+											Booking
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="block2-txt p-t-20">
+								<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+									Baycycle 5 Gear
+								</a>
+
+								<span class="block2-price m-text6 p-r-5">
+									$5.00 a Day
+								</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="item-slick2 p-l-15 p-r-15">
+						<!-- Block2 -->
+						<div class="block2">
+							<div class="block2-img wrap-pic-w of-hidden pos-relative">
+								<img src="images/img18.jpg" alt="IMG-PRODUCT">
+
+								<div class="block2-overlay trans-0-4">
+									<a href="#" class="block2- hov-pointer trans-0-4">
+										
+									</a>
+
+									<div class="block2-btn-addcart w-size1 trans-0-4">
+										<!-- Button -->
+										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+											Booking
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="block2-txt p-t-20">
+								<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+									Baycycle 5 Gear
+								</a>
+
+								<span class="block2-price m-text6 p-r-5">
+									$6.00 a Day
+								</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="item-slick2 p-l-15 p-r-15">
+						<!-- Block2 -->
+						<div class="block2">
+							<div class="block2-img wrap-pic-w of-hidden pos-relative">
+								<img src="images/img9.png" alt="IMG-PRODUCT" style="width:150px">
+
+								<div class="block2-overlay trans-0-4">
+									<a href="#" class="block2- hov-pointer trans-0-4">
+										
+									</a>
+
+									<div class="block2-btn-addcart w-size1 trans-0-4">
+										<!-- Button -->
+										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+											Booking
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="block2-txt p-t-20">
+								<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+									Duck Bike
+								</a>
+
+								<span class="block2-price m-text6 p-r-5">
+									$5.00 a Day
+								</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="item-slick2 p-l-15 p-r-15">
+						<!-- Block2 -->
+						<div class="block2">
+							<div class="block2-img wrap-pic-w of-hidden pos-relative ">
+								<img src="images/img18.jpg" alt="IMG-PRODUCT">
+
+								<div class="block2-overlay trans-0-4">
+									<a href="#" class="block2- hov-pointer trans-0-4">
+										
+									</a>
+
+									<div class="block2-btn-addcart w-size1 trans-0-4">
+										<!-- Button -->
+										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+											Booking
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="block2-txt p-t-20">
+								<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+									Fz Bike
+								</a>
+
+								<span class="block2-newprice m-text8 p-r-5">
+									$6.00 a Day
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+	
+	
+	
+	<section class="newproduct bgwhite p-t-45 p-b-105">
+		<div class="container">
+			<div class="sec-title p-b-60">
+				<h3 class="m-text5 t-center">
+					Sport
+				</h3>
+			</div>
+
+			<!-- Slide2 -->
+			<div class="wrap-slick2">
+				<div class="slick2">
+
+					
+
+					<div class="item-slick2 p-l-15 p-r-15">
+						<!-- Block2 -->
+						<div class="block2">
+							<div class="block2-img wrap-pic-w of-hidden pos-relative">
+								<img src="images/img12.png" alt="IMG-PRODUCT">
+
+								<div class="block2-overlay trans-0-4">
+									<a href="#" class="block2- hov-pointer trans-0-4">
+										
+									</a>
+
+									<div class="block2-btn-addcart w-size1 trans-0-4">
+										<!-- Button -->
+										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+											Booking
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="block2-txt p-t-20">
+								<a href="#" class="block2-name dis-block s-text3 p-b-5">
+									Reebok Footboll
+								</a>
+
+								<span class="block2-price m-text6 p-r-5">
+									$6.00 a Day
+								</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="item-slick2 p-l-15 p-r-15">
+						<!-- Block2 -->
+						<div class="block2">
+							<div class="block2-img wrap-pic-w of-hidden pos-relative">
+								<img src="images/img8.png" alt="IMG-PRODUCT">
+
+								<div class="block2-overlay trans-0-4">
+									<a href="#" class="block2- hov-pointer trans-0-4">
+										
+									</a>
+
+									<div class="block2-btn-addcart w-size1 trans-0-4">
+										<!-- Button -->
+										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+											Booking
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="block2-txt p-t-20">
+								<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+									Reebok Cricket Kit
+								</a>
+
+								<span class="block2-price m-text6 p-r-5">
+									$5.00 a Day
+								</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="item-slick2 p-l-15 p-r-15">
+						<!-- Block2 -->
+						<div class="block2">
+							<div class="block2-img wrap-pic-w of-hidden pos-relative block2-">
+								<img src="images/img7.png" alt="IMG-PRODUCT">
+
+								<div class="block2-overlay trans-0-4">
+									<a href="#" class="block2- hov-pointer trans-0-4">
+										
+									</a>
+
+									<div class="block2-btn-addcart w-size1 trans-0-4">
+										<!-- Button -->
+										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+											Booking
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="block2-txt p-t-20">
+								<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+									MRF BAT
+								</a>
+
+								<span class="block2-newprice m-text8 p-r-5">
+									$6.00 a Day
+								</span>
+							</div>
+						</div>
+					</div>
+					
+					
+					<div class="item-slick2 p-l-15 p-r-15">
+						<!-- Block2 -->
+						<div class="block2">
+							<div class="block2-img wrap-pic-w of-hidden pos-relative block2-">
+								<img src="images/img6.png" alt="IMG-PRODUCT" style="width:140px;">
+
+								<div class="block2-overlay trans-0-4">
+									<a href="#" class="block2- hov-pointer trans-0-4">
+										
+									</a>
+
+									<div class="block2-btn-addcart w-size1 trans-0-4">
+										<!-- Button -->
+										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+											Booking
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="block2-txt p-t-20">
+								<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+									Sport T-Shirts
+								</a>
+
+								<span class="block2-price m-text6 p-r-5">
+									$3.00 a Day
+								</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="item-slick2 p-l-15 p-r-15">
+						<!-- Block2 -->
+						<div class="block2">
+							<div class="block2-img wrap-pic-w of-hidden pos-relative">
+								<img src="images/img14.png" alt="IMG-PRODUCT">
+
+								<div class="block2-overlay trans-0-4">
+									<a href="#" class="block2- hov-pointer trans-0-4">
+										
+									</a>
+
+									<div class="block2-btn-addcart w-size1 trans-0-4">
+										<!-- Button -->
+										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+											Booking
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="block2-txt p-t-20">
+								<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+									Apple Iphone 10 64GB
+								</a>
+
+								<span class="block2-price m-text6 p-r-5">
+									$4.00 a Day
+								</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="item-slick2 p-l-15 p-r-15">
+						<!-- Block2 -->
+						<div class="block2">
+							<div class="block2-img wrap-pic-w of-hidden pos-relative">
+								<img src="images/img17.png" alt="IMG-PRODUCT" style="width: 250px;">
+
+								<div class="block2-overlay trans-0-4">
+									<a href="#" class="block2- hov-pointer trans-0-4">
+										
+									</a>
+
+									<div class="block2-btn-addcart w-size1 trans-0-4">
+										<!-- Button -->
+										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+											Booking
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="block2-txt p-t-20">
+								<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+									HP i5 Laptop
+								</a>
+
+								<span class="block2-price m-text6 p-r-5">
+								$5.00 a Day
+								</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="item-slick2 p-l-15 p-r-15">
+						<!-- Block2 -->
+						<div class="block2">
+							<div class="block2-img wrap-pic-w of-hidden pos-relative block2-">
+								<img src="images/img4.png" alt="IMG-PRODUCT">
+
+								<div class="block2-overlay trans-0-4">
+									<a href="#" class="block2- hov-pointer trans-0-4">
+										
+									</a>
+
+									<div class="block2-btn-addcart w-size1 trans-0-4">
+										<!-- Button -->
+										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+											Booking
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="block2-txt p-t-20">
+								<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+									Canon DSLR Camera 
+								</a>
+
+								<span class="block2-oldprice m-text7 p-r-5">
+								$8.00 a Day
+								</span>
+
+								<span class="block2-newprice m-text8 p-r-5">
+								$5.00 a Day
+								</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="item-slick2 p-l-15 p-r-15">
+						<!-- Block2 -->
+						<div class="block2">
+							<div class="block2-img wrap-pic-w of-hidden pos-relative block2-">
+								<img src="images/img19.png" alt="IMG-PRODUCT">
+
+								<div class="block2-overlay trans-0-4">
+									<a href="#" class="block2- hov-pointer trans-0-4">
+										
+									</a>
+
+									<div class="block2-btn-addcart w-size1 trans-0-4">
+										<!-- Button -->
+										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+											Booking
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="block2-txt p-t-20">
+								<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+									LG Android TV
+								</a>
+
+								<span class="block2-price m-text6 p-r-5">
+									$5.00 a Day
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+	
+	
+	<section class="recomm bgwhite p-t-45 p-b-105">
+		<div class="container">
+			<div class="sec-title p-b-60">
+				<h3 class="m-text5 t-center">
+					Furniture
+				</h3>
+				<a href="#">See All</a>
+			</div>
+
+			<!-- Slide2 -->
+			<div class="wrap-slick2">
+				<div class="slick2">
+
+
+					<div class="item-slick2 p-l-15 p-r-15">
+						<!-- Block2 -->
+						<div class="block2">
+							<div class="block2-img wrap-pic-w of-hidden pos-relative">
+								<img src="images/img5.jpg" alt="IMG-PRODUCT">
+
+								<div class="block2-overlay trans-0-4">
+									<a href="#" class="block2- hov-pointer trans-0-4">
+										
+									</a>
+
+									<div class="block2-btn-addcart w-size1 trans-0-4">
+										<!-- Button -->
+										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+											Booking
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="block2-txt p-t-20">
+								<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+									Comfortable Chair
+								</a>
+
+								<span class="block2-price m-text6 p-r-5">
+									$5.00 a Day
+								</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="item-slick2 p-l-15 p-r-15">
+						<!-- Block2 -->
+						<div class="block2">
+							<div class="block2-img wrap-pic-w of-hidden pos-relative">
+								<img src="images/img15.jpg" alt="IMG-PRODUCT">
+
+								<div class="block2-overlay trans-0-4">
+									<a href="#" class="block2- hov-pointer trans-0-4">
+										
+									</a>
+
+									<div class="block2-btn-addcart w-size1 trans-0-4">
+										<!-- Button -->
+										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+											Booking
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="block2-txt p-t-20">
+								<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+									Sofas & Couches
+								</a>
+
+								<span class="block2-price m-text6 p-r-5">
+									$6.00 a Day
+								</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="item-slick2 p-l-15 p-r-15">
+						<!-- Block2 -->
+						<div class="block2">
+							<div class="block2-img wrap-pic-w of-hidden pos-relative">
+								<img src="images/img5.jpg" alt="IMG-PRODUCT">
+
+								<div class="block2-overlay trans-0-4">
+									<a href="#" class="block2- hov-pointer trans-0-4">
+										
+									</a>
+
+									<div class="block2-btn-addcart w-size1 trans-0-4">
+										<!-- Button -->
+										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+											Booking
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="block2-txt p-t-20">
+								<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+								Cheerful & Couches
+								</a>
+
+								<span class="block2-price m-text6 p-r-5">
+									$5.00 a Day
+								</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="item-slick2 p-l-15 p-r-15">
+						<!-- Block2 -->
+						<div class="block2">
+							<div class="block2-img wrap-pic-w of-hidden pos-relative ">
+								<img src="images/img15.jpg" alt="IMG-PRODUCT">
+
+								<div class="block2-overlay trans-0-4">
+									<a href="#" class="block2- hov-pointer trans-0-4">
+										
+									</a>
+
+									<div class="block2-btn-addcart w-size1 trans-0-4">
+										<!-- Button -->
+										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+											Booking
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="block2-txt p-t-20">
+								<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+								Sofa
+								</a>
+
+								<span class="block2-newprice m-text8 p-r-5">
+									$6.00 a Day
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+	
+
+
+	<!-- Footer -->
+	
+
+
+	<!-- Back to top -->
+	<div class="btn-back-to-top bg0-hov" id="myBtn">
+		<span class="symbol-btn-back-to-top">
+			<i class="fa fa-angle-double-up" aria-hidden="true"></i>
+		</span>
+	</div>
+
+	<!-- Container Selection1 -->
+	<div id="dropDownSelect1"></div>
+
+
+	<!-- Modal Sign Up-->
+
+	  
+	<script type="text/javascript" src="vendor/slick/slick.min.js"></script>
+	<script type="text/javascript" src="js/slick-custom.js"></script>

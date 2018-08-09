@@ -1,0 +1,30 @@
+   
+                        <div>
+                            <div class="modal-header">
+                                <h3 class="modal-title"> <i class="fa fa-user fa-fw"></i> Update Category</h3>
+                            </div>
+                            <div class="modal-body">
+                                    
+                                      <div class="panel-body">
+                                        <form class="form-horizontal form-material" name="myform">
+                                            <div class="form-group">
+                                                <label class="col-md-12">Category Name</label>
+                                                <div class="col-md-12">
+                                                    <input type="text"  ng-required="true" ng-model="category.name" placeholder="Category Name" class="form-control form-control-line">
+                                                </div>
+                                                <div class="col-md-12" style="margin-top: 15px;">
+                                                   <label class="col-md-12">Description</label>
+                                                   <textarea ng-required="true" ng-model="category.description" placeholder="Description" class="form-control form-control-line"></textarea>
+                                                </div>
+                                            </div>
+                                            
+                                            
+                                        </form>
+                
+                                    </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-success" ng-click="myform.$valid && updateCategory()" ng-if="updatebtn">Update</button>
+                                <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+                            </div>
+                        </div> 

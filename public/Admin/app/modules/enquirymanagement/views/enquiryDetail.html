@@ -1,0 +1,45 @@
+   
+                        <div>
+                        <div class="modal-header">
+                            <h3 class="modal-title"> <i class="fa fa-user fa-fw"></i> View enquiry detail</h3>
+                        </div>
+                        <div class="modal-body">
+                                
+                                  <div class="panel-body">
+                                        <form class="form-horizontal form-material">
+                                                <div class="form-group">
+                                                    <label class="col-md-12">Name</label>
+                                                    <div class="col-md-12">
+                                                        <input type="text" readonly ng-model="user.name" placeholder="Johnathan Doe" class="form-control form-control-line">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="example-email" class="col-md-12">Email</label>
+                                                    <div class="col-md-12">
+                                                        <input type="email" readonly  ng-model="user.email" placeholder="johnathan@admin.com" class="form-control form-control-line" name="example-email" id="example-email">
+                                                    </div>
+                                                </div>
+                                               
+                                                <div class="form-group">
+                                                    <label class="col-md-12">Phone No</label>
+                                                    <div class="col-md-12">
+                                                        <input type="text" readonly  ng-model="user.mobile" placeholder="123 456 7890" class="form-control form-control-line">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-12">Message</label>
+                                                    <div class="col-md-12">
+                                                        <textarea rows="5" readonly  ng-model="user.message" class="form-control form-control-line"></textarea>
+                                                    </div>
+                                                </div>
+                                                
+                                                
+                                            </form>
+            
+                                </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" ng-click="ok()">OK</button>
+                            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+                        </div>
+                    </div> 

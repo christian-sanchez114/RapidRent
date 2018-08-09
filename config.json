@@ -1,0 +1,9 @@
+{
+    "connectionString":"mongodb://admin:root@ec2-54-84-106-74.compute-1.amazonaws.com:27017/RR",
+    "apiUrl": "http://localhost:3003/api",
+	"secret": "some-secret-shit-goes-here",
+    "refreshTokenSecret": "some-secret-refresh-token-shit",
+    "port": 8080,
+    "tokenLife": 900,
+    "refreshTokenLife": 86400
+}

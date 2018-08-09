@@ -1,0 +1,350 @@
+	<!-- Header -->
+	 
+	
+	<!-- Cart -->
+	<section class="profile bgwhite">
+	<div class="profile_ma_tab">
+		<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active pointercursure" id="pills-home-tab" data-toggle="pill" ng-click="userdataprofile('pills-profile');" role="tab" aria-controls="pills-home" aria-selected="true" ng-if="$root.loginDetail.role=='renter'">BOOKING HISTORY</a>
+    <a class="nav-link active pointercursure" id="pills-home-tab" data-toggle="pill" ng-click="userdataprofile('pills-profile');" role="tab" aria-controls="pills-home" aria-selected="true" ng-if="$root.loginDetail.role !='renter'">ORDER HISTORY</a>
+
+</li>
+  <li class="nav-item">
+    <a class="nav-link pointercursure" id="pills-profile-tab" data-toggle="pill"  ng-click="userdataprofile('pills-home');" role="tab" aria-controls="pills-profile" aria-selected="true">Profile</a>
+	</li>
+	<li class="nav-item" ng-if="$root.loginDetail.role=='lander'">
+    <a class="nav-link pointercursure" id="pills-productlist-tab" data-toggle="pill"  ng-click="userdataprofile('pills-productlist');" role="tab" aria-controls="pills-productlist" aria-selected="true">Product</a>
+	</li>
+	
+</ul>
+</div>
+<div class="tab-content" id="pills-tabContent">
+
+  <!-- Booking tab -->
+  <div class="tab-pane fade  active" id="pills-home"  role="tabpanel" aria-labelledby="pills-home-tab"> 
+  <ul>
+  <li>
+  <label>Show</label>
+  <select class="accountDetails__creditDetails--bookingSelect" id="js-booking-type">
+                    <option value="upcoming">Upcoming Bookings</option>
+                    <option value="past">Past Bookings</option>
+                </select></li>
+	<li>
+	<label>Dates</label>
+	 <div class="form-group">
+				<div class="input-group date" data-provide="datepicker">
+					<input type="text" class="form-control" placeholder="Check-in-From">
+					<div class="input-group-addon">
+					<span class="glyphicon glyphicon-calendar"></span>
+					</div>
+					</div>
+		</div>
+		
+		<div class="form-group">
+				<div class="input-group date" data-provide="datepicker">
+					<input type="text" class="form-control" placeholder="Check-in-Till">
+					<div class="input-group-addon">
+					<span class="glyphicon glyphicon-calendar"></span>
+					</div>
+					</div>
+		</div>
+		
+	</li>			
+				
+  </ul>
+  <!-- <table class="table-shopping-cart">
+						
+
+						<tr class="table-row">
+							<td class="column-1">
+								<div class="cart-img-product b-rad-4 o-f-hidden">
+									<img src="images/proper.jpg" alt="IMG-PRODUCT">
+								</div>
+							</td>
+							<td class="column-2"><p class="hotal-name">OYO 12361 S24 Hotel</p><p class="room_d">1 Guest - 1 Rooms, 1 Nights <span>Apr 28, 2018 - Apr 29, 2018</span></p></td>
+							<td class="column-3">
+							<p class="user-name hotal-name"> shubham</p>
+							<p class="room_d">SYMB5036<span>Sat, 28 Apr 2018</span></p>
+							</td>
+							<td class="column-4">
+							</td>
+							<td class="column-5">
+							<p class="hotal-name">Confirm Booking</p><p class="room_d">Pending Amt. 964 <span><a href="#">View Details</a></span></p>
+							</td>
+						</tr>
+
+						
+					</table> -->
+
+
+					<div class="panel-body">
+						<div class="table-responsive">
+								<div class="alert removeproduct alert-dismissible" ng-if="removeproductmsg">
+										<p type="button" class="close" data-dismiss="alert">x</p>
+										<strong>{{removeproductmsg}}</strong>
+							</div>
+								<div class="form-group" style="margin-left: 63px;">
+										<label class="col-md-12" style="padding-left: 0;margin-left: 0px;"> search by(Category Name , Description)</label>
+										<div class="col-md-6" style="padding-bottom: 20px;
+										padding-left: 0;">
+							<input type="text" ng-model="searchTextbooking" class="form-control productlistInput">
+							</div>
+							</div>
+							<table class="table table-striped table-bordered table-hover" ng-if="$root.loginDetail.role=='renter'" style="margin-bottom: 20px;">
+								<thead>
+									<tr>
+										<th>Files Count</th>
+										<th>Product</th>
+										<th>Price</th>
+										<th>Booking Date</th>
+										<th>Status</th>
+										<!-- <th>Action</th> -->
+									</tr>
+								</thead>
+								<tbody>
+									<tr ng-repeat="obj in bookinglist | filter:searchTextbooking">
+										<td>{{obj.files.length}}</td>
+										<td>{{obj.name}}</td>
+										<td>{{obj.price}}</td>
+										<td>{{obj.created | date:'MM/dd/yyyy'}}</td>
+										<td>{{obj.status}}</td>
+										<!-- <td><a style="cursor: pointer;" ng-if="obj.status=='pending'" class="actionCroud" >
+											<p class="green fa fa-thumbs-up"></p>
+										 </a>
+										 <a style="cursor: pointer;" ng-if="obj.status !='pending'" class="actionCroud" >
+											<p class="red fa fa-thumbs-up"></p>
+										 </a>
+										<a style="cursor: pointer;" class="actionCroud" ng-confirm-click="Are you sure to delete this record ?" >
+											<p class="fa fa-trash-o deleteevent"></p>
+										 </a>
+										</td> -->
+									</tr>
+								</tbody>
+							</table>
+							<table class="table table-striped table-bordered table-hover" ng-if="$root.loginDetail.role !='renter'" style="margin-bottom: 20px;">
+								<thead>
+									<tr>
+										<th>Files Count</th>
+										<th>Product</th>
+										<th>Price</th>
+										<th>Booking Date</th>
+										<th>Renter Id</th>
+										
+										<th>Status</th>
+										<th>Action</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr ng-repeat="obj in bookinglist | filter:searchTextbooking">
+										<td>{{obj.files.length}}</td>
+										<td>{{obj.name}}</td>
+										<td>{{obj.price}}</td>
+										<td>{{obj.created | date:'MM/dd/yyyy'}}</td>
+										<td>{{obj.renterId}}</td>
+										<td>{{obj.status}}</td>
+										<td><a style="cursor: pointer;" ng-if="obj.status=='pending'" class="actionCroud" >
+											<p class="green fa fa-thumbs-up"></p>
+										 </a>
+										 <a style="cursor: pointer;" ng-if="obj.status !='pending'" class="actionCroud" >
+											<p class="red fa fa-thumbs-up"></p>
+										 </a>
+										<a style="cursor: pointer;" class="actionCroud" ng-confirm-click="Are you sure to delete this record ?" >
+											<p class="fa fa-trash-o deleteevent"></p>
+										 </a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<pagination total-items="totalItemsrecord" ng-change="pageChanged(currentPage)" ng-model="currentPage" max-size="maxSize" class="pagination-sm" boundary-links="true"></pagination>
+
+					</div>
+
+
+
+
+
+
+
+
+
+
+  </div>
+  
+	<!-- profile tab -->
+	
+  <div class="tab-pane fade  active" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+  
+  <div class="nav flex-column nav-pills profile_t" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+  <a class="nav-link active pointercursure" id="v-pills-home-tab"  role="tab" aria-controls="v-pills-home" aria-selected="true" ng-click="profilePasswordWindowChange('home')">PROFILE INFO</a>
+  <a class="nav-link pointercursure" id="v-pills-profile-tab"   role="tab" aria-controls="v-pills-profile" aria-selected="false" ng-click="profilePasswordWindowChange('profile')">CHANGE PASSWORD</a>
+</div>
+<div class="tab-content" id="v-pills-tabContent">
+  <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+		<div class="alert alert-success alert-dismissible" ng-if="message">
+			<p type="button" class="close" data-dismiss="alert">x</p>
+			<strong>{{message}}</strong>
+</div>
+		<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">FULL NAME</label>
+    <input type="text" class="form-control" ng-model="userdetail.userName" id="name" aria-describedby="name" placeholder="name">
+  </div>
+  
+ <div class="form-group">
+    <label for="exampleInputEmail1">MOBILE NUMBER</label>
+    <input type="text" class="form-control" ng-model="userdetail.phoneNumber" id="maobile" aria-describedby="name" placeholder="phone number">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">EMAIL ADDRESS</label>
+    <input type="email" class="form-control" ng-model="userdetail.email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="email">
+  </div>
+ 
+  <button type="submit" class="btn btn-primary" ng-click="updateProfileDetail(userdetail)">Update</button>
+</form>
+</div>
+  <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+		<div class="alert alert-success alert-dismissible" ng-if="changemessage">
+			<p type="button" class="close" data-dismiss="alert">x</p>
+			<strong>{{changemessage}}</strong>
+</div>
+    <form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">CURRENT PASSWORD</label>
+    <input type="password" ng-model="user.oldpassword" class="form-control" id="curr_password" aria-describedby="name">
+  </div>
+  
+ <div class="form-group">
+    <label for="exampleInputEmail1">NEW PASSWORD</label>
+    <input type="password" ng-model="user.newpassword" class="form-control" id="new_password" aria-describedby="name">
+  </div>
+  <button type="submit" class="btn btn-primary" ng-click="changePassword()">Change password</button>
+  <a href="#">Don't know your password?</a>
+  <p style="line-height: 15px;"><span>Password should have atleast 8 characters including 1 special character.</span></p>
+</form>
+  
+  </div>
+</div>
+  
+	</div>
+	
+
+	<!-- Product tab -->
+	
+  <div class="tab-pane fade  active" id="pills-productlist" role="tabpanel" aria-labelledby="pills-productlist-tab">
+  
+		<div class="nav flex-column nav-pills productlist profile_t" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+		<a class="nav-link active pointercursure productlistadd" id="v-pills-home-tab"  role="tab" aria-controls="v-pills-home" aria-selected="true" ng-click="profilePasswordWindowChange('addproduct')">Add PRODUCT</a>
+		<a class="nav-link pointercursure" id="v-pills-productlist-tab"   role="tab" aria-controls="v-pills-productlist" aria-selected="false" ng-click="profilePasswordWindowChange('productlist')" >PRODUCT LIST</a>
+	</div>
+	<div class="tab-content" id="v-pills-tabContent">
+		<div class="tab-pane fade show active formProductlist" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+			<div class="alert alert-success alert-dismissible" ng-if="addproductmsg">
+				<p type="button" class="close" data-dismiss="alert">x</p>
+				<strong>{{addproductmsg}}</strong>
+	</div>
+			<form>
+		<div class="form-group">
+			<label for="exampleInputEmail1">Product Name</label>
+			<input type="text" class="form-control" ng-model="product.name" id="name" aria-describedby="name" placeholder="Product Name">
+		</div>
+		
+	 <div class="form-group">
+			<label for="exampleInputEmail1">Price</label>
+			<input type="text" class="form-control" ng-model="product.price" id="maobile" aria-describedby="name" placeholder="Price">
+		</div>
+		<div class="form-group">
+			<label for="exampleInputEmail1">Quantity </label>
+			<input type="text" class="form-control" ng-model="product.quantity" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Quantity">
+		</div>
+		<div class="form-group">
+			<label for="exampleInputEmail1">Description</label>
+			<input type="text" class="form-control" ng-model="product.description" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Description">
+		</div>
+		<div class="form-group">
+				<label for="exampleInputEmail1">Product Category</label>
+			<select class="form-control" ng-model="product.categoryId">
+					<option selected>--- Select Category---</option>
+				<option ng-value="catObj._id" ng-repeat="catObj in Categories">{{catObj.name}}</option>
+				
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="exampleInputEmail1">Image</label>
+			<!-- <input type="file" class="form-control" ng-model="product.email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="email"> -->
+
+    		<button ngf-select="uploadFiles($files)" multiple 
+            accept="image/*">Select Files</button>
+		</div>
+		<br>
+	    <br>Files:
+	    <ul>
+	        <li ng-repeat="f in files" style="font:smaller">
+	            {{f.name}}
+	        </li>
+	    </ul>
+	    <span class="progress" ng-show="progress >= 0">
+	        <div style="width:{{progress}}%" ng-bind="progress + '%'"></div>
+	    </span>
+	    {{errorMsg}}
+		<button type="submit" class="btn btn-primary" ng-click="addproduct(product)">Add</button>
+	</form>
+	</div>
+		<div class="tab-pane fade" id="v-pills-productlist" role="tabpanel" aria-labelledby="v-pills-productlist-tab">
+		
+				<div class="panel panel-default">
+						<div class="panel-heading">
+								Category List
+						</div>
+						<div class="panel-body">
+							<div class="table-responsive">
+									<div class="alert removeproduct alert-dismissible" ng-if="removeproductmsg">
+											<p type="button" class="close" data-dismiss="alert">x</p>
+											<strong>{{removeproductmsg}}</strong>
+								</div>
+									<div class="form-group">
+											<label class="col-md-12" style="padding-left: 0"> search by(Category Name , Description)</label>
+											<div class="col-md-6" style="padding-bottom: 20px;
+											padding-left: 0;">
+								<input type="text" ng-model="searchText" class="form-control productlistInput">
+								</div>
+								</div>
+								<table class="table table-striped table-bordered table-hover">
+									<thead>
+										<tr>
+											<th>Files Count</th>
+											<th>Product</th>
+											<th>Price</th>
+											<th>Created Date</th>
+											<th>Action</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr ng-repeat="obj in productList | filter:searchText">
+											<td>{{obj.files.length}}</td>
+											<td>{{obj.name}}</td>
+											<td>{{obj.price}}</td>
+											<td>{{obj.created | date:'MM/dd/yyyy'}}</td>
+											<td><a style="cursor: pointer;" class="actionCroud" ng-click="showModal(obj)">
+												<p class="category fa fa-edit"></p>
+											 </a>
+											<a style="cursor: pointer;" class="actionCroud" ng-confirm-click="Are you sure to delete this record ?" ng-click="removeItems(obj._id)">
+												<p class="fa fa-trash-o deleteevent"></p>
+											 </a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<pagination total-items="totalItemsrecord" ng-change="pageChanged(currentPage)" ng-model="currentPage" max-size="maxSize" class="pagination-sm" boundary-links="true"></pagination>
+	
+						</div>
+					</div>
+		
+		</div>
+	</div>
+		
+		</div>
+</div>
+	</section>
